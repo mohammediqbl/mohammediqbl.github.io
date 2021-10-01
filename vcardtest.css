@@ -1,0 +1,81 @@
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: auto;
+}
+
+body {
+  background: #ff416c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff4b2b,
+    #ff416c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff4b2b,
+    #ff416c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav {
+  text-transform: uppercase;
+  font-size: smaller;
+  color: white;
+}
+
+nav a.active {
+  color: white;
+}
+nav h5 {
+  font-weight: bold;
+}
+
+.utama {
+  color: white;
+}
+
+.utama h2 {
+  font-weight: 100;
+}
+.utama h2 span {
+  font-weight: 500;
+  color: rgb(29, 152, 235);
+}
+
+.kedua p {
+  font-weight: 100;
+}
+
+.utama button {
+  font-weight: bold;
+  color: white;
+}
+
+.foto1 {
+  position: absolute;
+  top: -40%;
+  right: 0%;
+  width: 49%;
+}
+
+.foto2 {
+  width: 100%;
+}
