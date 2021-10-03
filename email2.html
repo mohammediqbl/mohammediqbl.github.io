@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>email2 | Benihana</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: tomato;
+        font-size: 19px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      header {
+        background-color: tomato;
+        color: white;
+        width: 100%;
+        margin-top: 2rem;
+        min-height: 100px;
+      }
+
+      header > h1 {
+        font-weight: 700;
+        font-size: 30px;
+        margin: 1rem 0rem 0rem 1rem;
+      }
+      header > p {
+        margin-top: -0.5rem;
+        font-size: 11px;
+        font-weight: 100;
+        margin: -0.5rem 0rem 0rem 1rem;
+        padding-bottom: 1rem;
+      }
+
+      #section {
+        background-color: #141e30;
+        padding: 0rem 0rem 4rem 0rem;
+        margin-top: -2.75rem;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+      }
+
+      #section > h2 {
+        font-weight: 100;
+        color: white;
+        font-size: 70px;
+        padding: 4rem 0rem 0rem 1rem;
+        line-height: 1.1;
+      }
+
+      #section > p {
+        font-weight: 100;
+        color: white;
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 2rem 0rem 2rem 1rem;
+      }
+
+      .button {
+        background-color: darkorange;
+        margin: 0rem 0rem 4rem 1rem;
+        padding: 0.1rem 0.5rem 0.3rem 0.7rem;
+        border-radius: 5px;
+        height: 40px;
+      }
+      .button > button {
+        background-color: darkorange;
+        color: white;
+        font-weight: 300;
+        width: 90px;
+      }
+
+      #section-healthy {
+        background-color: #141e30;
+        color: white
+      }
+
+      #container {
+        max-width: 100%;
+        list-style: none;
+        display: flex;
+        
+      }
+      #container > li {
+        width: 220px;
+        margin: 0rem 1rem 1rem 1rem;
+      }
+
+      #container > li > figure {
+        margin: 0rem 0rem -0.5rem 0rem;
+      }
+
+      #container > li > figure > img {
+        border-top-left-radius: 20px ;
+        border-top-right-radius: 20px ;
+
+      }
+      #container > li > figcaption {
+        background-color: tomato; 
+        min-height: 140px;
+        line-height: 1.3;
+        border-bottom-left-radius: 20px ;
+        border-bottom-right-radius: 20px ;
+      }
+      #healthyarticle {
+        min-width: 250px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      #social {
+        max-width: 200px;
+        margin: -3.3rem 1rem 0rem 0rem;
+        float: right;
+        list-style-type: none;
+      }
+
+      #social > li {
+        padding-right: 1rem;
+      }
+
+      
+      #banner > img {
+        width: 1200px;
+      }
+
+      #banner {
+        background-color: #141e30;
+        color: white;
+        margin: 0rem 0rem 1rem 0rem;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      #banner > h3 {
+        margin: 1rem 0rem 0.5rem 1rem;
+      }
+
+      #banner > p {
+        padding: 0.5rem 0rem 2rem 1.25rem;
+      }
+
+      
+      #news {
+        background-color:#141e30;
+        color: white;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        justify-content: center;
+        
+
+      }
+
+      #news > li {
+        list-style: none;
+      }
+
+      #news > li > figure {
+        width: 90px;
+        
+      }
+      #news > li > figure > img {
+        margin: 2rem 0rem -0.5rem 3rem;
+        
+      }
+      #news > li > figcaption {
+        font-size: 14px;
+        text-align: center;
+        padding: 1.5rem;
+        line-height: 1.5;
+        min-width: 6px;
+        
+      }
+
+      #news > li > figcaption > p {
+        
+        padding: 1rem 0rem 1rem 0rem;
+        
+      }
+      .one-call {
+        color: white;
+        background-color: #141e30;
+        justify-content: center;
+        text-align: center;
+        
+      }
+      .one-call > h1 {
+        font-weight: 100;
+        font-size: 70px;
+        padding: 4rem 0rem 0rem -1rem;
+        line-height: 1.1;
+      }
+      .one-call > p {
+        padding: 2rem 5rem 2rem 5rem;
+        line-height: 1.6;
+      }
+
+      #coupon-ul {
+        justify-content: center;
+        text-align: start;
+        margin: 8rem 1rem 0rem 0rem;
+        font-size: 14px;
+        list-style-type: none;
+        display: flex;
+      }
+
+      #coupon-ul > li > figure {
+        width: 230px;
+        margin-left: 1rem;
+      }
+      #coupon-ul > li > figure > img{
+        width: 230px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      #coupon-ul > li > figcaption {
+        width: 230px;
+        height: 120px;
+        background-color: tomato;
+        margin: -0.3rem 0rem 3rem 1rem;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        line-height: 1.3;
+      }
+      #coupon-ul > li > figcaption > h2 {
+        padding: 1rem 1rem 1rem 0.5rem;
+      }
+      #coupon-ul > li > figcaption > p {
+        padding: 0rem 0rem 1rem 0.5rem;
+        font-weight: 300;
+      }
+
+      #connect {
+        max-width: 100%;
+        margin: 1rem 0rem 0rem 0rem;
+        background-color:#141e30;
+        color: white;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        
+      }
+      #connect > ul {
+        display: flex;
+        
+      }
+      #connect > ul > li {
+        list-style: none;
+        width: 192px;
+        margin: 1rem -1rem 2rem 1rem;
+        justify-content: center;
+      }
+
+      #connect > ul > li > figcaption {
+        background-color: tomato;
+        margin-top: -0.5rem;
+        min-height: 160px;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+      #connect > ul > li > figcaption > h2 {
+        padding: 1rem 1rem 1rem 0.5rem;
+        font-size: 19px;
+      }
+      #connect > ul > li > figcaption > p {
+        padding: 0rem 0.5rem 1rem 0.5rem;
+        font-weight: 300;
+        min-height: 80px;
+      }
+
+      #owner {
+        background-color: #141e30;
+        color: white;
+        margin: 0rem 0rem 2rem 0rem;
+        font-weight: 100;
+        padding: 0rem 0rem 1rem 1rem;
+      }
+      #owner > h9 {
+        font-size: 90px;
+        line-height: 1.1;
+      }
+      #owner > p {
+        font-size: 16px;
+        line-height: 1.3;
+        margin: 1rem 0rem 0rem 0rem;
+      }
+
+      #pic-owner {
+        background-color: #141e30;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        max-width: 100%;
+        margin: -2rem 0rem 0rem 0rem;
+        color: white;
+        justify-content: center;
+        text-align: center;
+      }
+      #pic-owner > ul {
+        display: flex;
+      }
+      #pic-owner-lanjut > li {
+        list-style: none;
+        margin: 2rem;
+        padding: 0rem 1rem 1rem 1rem;
+      }
+      #pic-owner-lanjut > li > figure > img {
+        margin: 1rem 0rem -3.25rem 0rem;
+
+      }
+      #pic-owner-lanjut > li > figcaption {
+        padding: 0rem 0rem 1rem 0rem;
+        text-align: center;
+        opacity: 70%;
+        font-size: 14px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- header -->
+      <header>
+        <h1>BENIHANA</h1>
+        <p>its not just a meal, its experience</p>
+        <div id="logo">
+          <ul id="social" style="display: flex">
+            <li>
+              <a href="#"
+                ><img
+                  src="img/foto biodata/LOGO instagram 3D-35.png"
+                  alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/foto biodata/LOGO-36.png" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/foto biodata/LOGO-37.png" alt="twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/foto biodata/LOGO-38.png" alt="tiktok"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- akhir header -->
+
+      <!-- section artikel -->
+      <section>
+        <div id="section">
+          <h2>
+            its not just a meal, <br />
+            its
+            <span style="color: turquoise; font-weight: 500">experience</span>
+          </h2>
+          <p>
+            Menu baru dari Benihana untuk anda, yang tentunya akan memberikan
+            kesan yang berbeda <br />
+            ayo dicoba
+          </p>
+          <a href="#" class="button"><button>selengkapnya</button></a>
+        </div>
+      </section>
+      <!-- akhir section artikel -->
+
+      <!-- section menu healthy -->
+      <div id="section-healthy">
+        <ul id="container">
+          <li id="healthy1">
+            <figure>
+              <img src="img/foto maanan/2.jpg" alt="2" />
+            </figure>
+            <figcaption>
+              <h2 style="font-size: 20px; padding: 1rem 0rem 0.5rem 0.5rem;">Rice Noodle</h2>
+              <p style="font-size:15px; font-weight:100;font-weight:300; padding: 0.5rem 0rem 1rem 0.5rem;">
+                Healty rice noodle for vegan <br />
+                and for person n diet
+              </p>
+            </figcaption>
+          </li>
+          <li id="healthy2">
+            <figure>
+              <img src="img/foto maanan/3.jpg" alt="3" />
+            </figure>
+            <figcaption>
+              <h2 style="font-size: 20px; padding: 1rem 0rem 0.5rem 0.5rem;">Healthy Material</h2>
+              <p style="font-size:15px; font-weight:300; padding: 0.5rem 0rem 1rem 0.5rem;">
+                We always provide healthy material 
+                for every menu in our retaurant
+              </p>
+            </figcaption>
+          </li>
+          <li id="healthyarticle">
+            <h2 style="font-weight: 100; font-size: 39px; margin: 6rem -0.5rem 1rem 0rem;">
+              Healthy meal for<br />
+              <span style="color: turquoise; font-weight: 500">healthy</span> lovers
+            </h2>
+            <p style="font-weight: 100; font-size: 13px; margin: 0rem -0.5rem 1rem 0rem; line-height: 1.5;">
+              not only delicious our menu has low calories, 
+              <br> its very suitable for those of you who are on 
+              <br />healthy diet
+            </p>
+            <a href="#" class="button" style="margin: 1rem 0rem 0rem -0.1rem;"><button>selengkapnya</button></a>
+            </figcaption>
+          </li>
+        </ul>
+      </div>
+      <!-- akhir section menu healty -->
+
+      <!-- banner -->
+      <div id="banner">
+        <img src="img/foto maanan/1.jpg" alt="1" />
+        <h3 style="font-size: 50px; font-weight: 100;">Healthy <span style="color: turquoise; font-weight: 500;">Rice Curry</span></h3>
+        <p style="font-weight: 300;">
+          Healthy rice curry for diet 
+        </p>
+      </div>
+      <!-- akhir banner -->
+
+      <!-- berita -->
+      <div id="berita">
+        <ul id="news" style="display: flex;">
+          <li>
+            <figure style="margin-left: 1.5rem;">
+              <img src="img/link.png" alt="link">
+            </figure>
+            <figcaption>
+              <h2>Connect</h2>
+              <p>find newest and updated info <br>from us via social media</p>
+            </figcaption>
+          </li>
+          <li>
+            <figure style="margin-left: 0.75rem;">
+              <img src="img/plate.png" alt="plate">
+            </figure>
+            <figcaption>
+              <h2>Restaurant</h2>
+              <p>find info about our partner <br>and our branch</p>
+            </figcaption>
+          </li>
+          <li>
+            <figure style="margin-left: -0.25rem;">
+              <img src="img/quality.png" alt="quality">
+            </figure>
+            <figcaption>
+              <h2>Event</h2>
+              <p>our event in the near <br>future</p>
+            </figcaption>
+          </li>
+          <li>
+            <figure>
+              <img src="img/megaphone.png" alt="dish">
+            </figure>
+            <figcaption>
+              <h2>Whats New</h2>
+              <p>find relate information <br>in Benihana</p>
+            </figcaption>
+          </li>
+        </ul>
+      </div>
+      <!-- akhir berita -->
+
+      <!-- media link -->
+      <div class="one-call">
+        <h1 style="font-size: 90px;"> Updated <span style="color: turquoise; font-weight: 700;"> health</span> information</h1>
+        <p style="font-weight: 100; font-size: 16px;">
+          Find and read health article that relate with Benihana<br>and find more updated info from us
+        </p>
+
+        <a href="#" class="button" style="margin: 1rem 1rem 3rem 1.5rem;"><button>selengkapnya</button></a>
+
+
+        <!-- akhir media link -->
+
+        <!-- coupon -->
+        <div id="coupon">
+          <ul id="coupon-ul">
+            <li id="coupon-li">
+              <figure>
+                <img src="img/foto maanan/5.jpg" alt="5">
+              </figure>
+              <figcaption>
+                <h2>Salad</h2>
+                <p>Coupon for healthy salad this month in every Benihana branch</p>
+              </figcaption>
+            </li>
+            <li id="coupon-li">
+              <figure>
+                <img src="img/foto maanan/5.jpg" alt="5">
+              </figure>
+              <figcaption>
+                <h2>Dessert</h2>
+                <p>Coupon for healthy salad this month in every Benihana branch</p>
+              </figcaption>
+            </li>
+            <li id="coupon-li">
+              <figure>
+                <img src="img/foto maanan/5.jpg" alt="5">
+              </figure>
+              <figcaption>
+                <h2>Healthy Menu</h2>
+                <p>Coupon for healthy menu until end of year in every Benihana branch</p>
+              </figcaption>
+            </li>
+          </ul>
+        </div>
+        <div id="section" style="text-align:start;">
+          <h2 style="font-size:65px">
+            Choose your <span style="color: turquoise; font-weight: 500;">coupon </span> <br>and get<span style="color: turquoise; font-weight: 500;"> 50% </span>price for special menu
+            
+          </h2>
+          <p style="font-size:16px; margin-left: 0.25rem;">
+            This email allow you to take many option of coupon in or menu, <br />check out what coupon you cant get and choose right now
+          </p>
+          <a href="#" class="button" style="margin-left: 1.25rem;"><button>selengkapnya</button></a>
+        </div>
+        <!-- akhir coupon -->
+      </div>
+
+      <!-- connect -->
+      <section>
+        <div id="connect">
+          <ul id="connect-social">
+            <li>
+              <figure>
+                <img src="img/foto maanan/6.jpg" alt="6" style="border-top-left-radius: 20px;">
+              </figure>
+              <figcaption style="border-bottom-left-radius: 20px; margin-top: -0.45rem">
+                <h2> Organic Soy Sauce</h2>
+                <p>read article about organic soy souce in our instagram</p>
+              </figcaption>
+            </li>
+            <li>
+              <figure>
+                <img src="img/foto maanan/8.jpg" alt="8">
+              </figure>
+              <figcaption>
+                <h2>Organic Fried Food</h2>
+                <p>new fried method for healthy cook, click pic for ore info</p>
+              </figcaption>
+            </li>
+            <li>
+              <figure>
+                <img src="img/foto maanan/3.jpg" alt="3">
+              </figure>
+              <figcaption>
+                <h2>Organic Material</h2>
+                <p>how effective fresh material imact your body, read more by click the picture</p>
+              </figcaption>
+            </li>
+            <li>
+              <figure>
+                <img src="img/foto maanan/7.jpg" alt="7" style="border-top-right-radius: 20px;">
+              </figure>
+              <figcaption style="border-bottom-right-radius: 20px;">
+                <h2>Rice Noodle</h2>
+                <p>Rice noodle is healtier than other carbohydrate, click for more info</p>
+              </figcaption>
+            </li>
+          </ul>
+        </div>
+        <div id="owner">
+          <h9>Connect to<br> the <span style="font-weight: 500;color: turquoise;">owner</span>  </h9>
+          <p>Connect and find more updated info from the owner</p>
+        </div>
+        <div id="pic-owner">
+          <ul id="pic-owner-lanjut">
+            <li>
+              <figcaption>
+                <h2>Mrs.Angel | Owner</h2>
+              </figcaption>
+              <figure>
+              <img src="img/business-3d-peace-girl-close-up-1.png" alt="mrs">
+            </figure>
+            </li>
+            <li>
+              <figcaption>
+                <h2>Mr.Jeremy | Owner</h2>
+              </figcaption>
+              <figure>
+              <img src="img/business-3d-peace-man-close-up-4.png" alt="mr">
+              </figure>
+            </li>
+          </ul>
+        </div>
+        
+      </section>
+      <!-- akhir connect -->
+    </div>
+  </body>
+</html>
